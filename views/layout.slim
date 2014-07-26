@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport" content="width=device-width, initial-scale=1"
+    meta name="description" content=""
+    meta name="author" content=""
+
+    title Fluentd Event Sniffer
+
+    link href=url("/vendor/bootstrap/css/bootstrap.css") rel="stylesheet"
+    link href=url("/css/app.css") rel="stylesheet"
+
+    script src=url("/vendor/underscore/underscore.js")
+    script src=url("/vendor/knockoutjs/knockout.js")
+
+  body
+    div class="navbar navbar-inverse" role="navigation"
+      .container
+        .navbar-brand
+          p Fluentd Event Sniffer
+    .container
+
+      == yield
+
+    script src = rocketio_js
+    script src=url("/vendor/jquery/jquery.js")
+    script src=url("/vendor/bootstrap/js/bootstrap.js")
+    script src=url("/js/app.js")

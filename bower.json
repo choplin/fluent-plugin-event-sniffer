@@ -1,0 +1,17 @@
+{
+  "name": "fluent-plugin-event-sniffer",
+  "private": true,
+  "dependencies": {
+    "knockoutjs": "~3.1.0",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.2.0",
+    "underscore": "~1.6.0"
+  },
+  "exportsOverride": {
+    "bootstrap": {
+      "css": "dist/css/bootstrap.css",
+      "js": "dist/js/bootstrap.js",
+      "fonts": "dist/fonts/*"
+    }
+  }
+}

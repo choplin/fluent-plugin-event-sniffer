@@ -1,0 +1,59 @@
+.row
+  .col-md-3
+    .sidebar
+      .sidebar-header
+        p
+          span class="glyphicon glyphicon-bookmark"
+          |Bookmarks
+
+      ul.nav
+        - for p in @pattern_bookmarks
+          li
+            a data-bind="click: selectPattern" = p
+
+  .col-md-9
+    .row
+        .col-md-8
+          form data-bind="submit: submit"
+            .input-group
+              span.input-group-addon pattern
+              input.form-control type="text" data-bind="value: pattern, valueUpdate: 'input'"
+        .col-md-4
+          .btn-group
+            button type="button" class="btn btn-success" disabled=true data-bind="enable: canStart, click: start"
+              span class="glyphicon glyphicon-play"
+              |Start
+            button type="button" class="btn btn-warning" disabled=true data-bind="enable: running, click: stop"
+              span class="glyphicon glyphicon-stop"
+              |Stop
+
+    .row style="display: none" data-bind="if: unexpectedError, visible: unexpectedError"
+      div class="alert alert-danger alert-dismissible" role="alert"
+        button type="button" class="close" data-dismiss="alert"
+          span aria-hidden="true" &times;
+          span class="sr-only" Close
+        |An unexpected error occured.
+
+    .row style="display: none" data-bind="if: alreadySniffing, visible: alreadySniffing"
+      div class="alert alert-warning alert-dismissible" role="alert"
+        button type="button" class="close" data-dismiss="alert"
+          span aria-hidden="true" &times;
+          span class="sr-only" Close
+        |Could not start because another client is already sniffing.
+
+    .row
+      h2.sub-header Events
+      table class="table table-striped" data-bind="if: showTable"
+        thead
+          tr
+            th tag
+            th time
+            th record
+        tbody data-bind="foreach: events.slice(0).reverse()"
+          tr
+            td data-bind="text: tag"
+            td data-bind="text: time"
+            td data-bind="text: record"
+
+.row
+  div id="config" data-max-events=settings.max_events
