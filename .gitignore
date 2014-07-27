@@ -24,3 +24,5 @@ mkmf.log
 node_modules
 bower_components
 public
+test.log
+dummy.log
