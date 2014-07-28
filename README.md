@@ -4,6 +4,10 @@ Fluentd event sniffing tool
 
 ![example of tool](https://raw.githubusercontent.com/choplin/fluent-plugin-event-sniffer/master/img/example.png)
 
+## Demo
+
+[![demo](http://img.youtube.com/vi/_ykzeP2xGNg/0.jpg)](http://www.youtube.com/watch?v=_ykzeP2xGNg)
+
 ## Notice
 
 This tool will modify the core module of fluentd, Enigne, using `instance_eval`. There is a potential risk that the fluentd process could be broken unexpectedly.
