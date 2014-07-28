@@ -6,7 +6,7 @@ Fluentd event sniffing tool
 
 ## Demo
 
-[![demo](http://img.youtube.com/vi/_ykzeP2xGNg/0.jpg)](http://www.youtube.com/watch?v=_ykzeP2xGNg)
+http://youtu.be/_ykzeP2xGNg
 
 ## Notice
 
